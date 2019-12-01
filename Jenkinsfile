@@ -19,7 +19,8 @@ stage('Run image') {
 docker.image('nginx').withRun('-p 80:80'){
 c->
 sh 'docker ps'
+   sh 'echo "hello abdessalem" >/usr/share/nginx/index.html'
 sh 'curl localhost'
-
+}
 }
 
