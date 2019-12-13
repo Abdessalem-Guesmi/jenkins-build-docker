@@ -1,3 +1,3 @@
 FROM nginx:latest
-COPY index.html /usr/share/nginx/html
+RUN sed -i 's'/nginx/Abdou/g  /usr/share/nginx/html/index.html
 EXPOSE 80
