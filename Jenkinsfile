@@ -19,8 +19,9 @@ stage('Run image') {
 docker.image('nginx').withRun('-p 8088:80'){
 c->
 sh 'docker ps'
-//   sh 'echo "hello abdessalem" >/usr/share/nginx/html/index.html'
-sh 'curl localhost'
+   sh 'sed -i  "s/nginx/hello abdessalem" >/usr/share/nginx/html/index.html'
+   
+//sh 'curl localhost'
 }
 }
 
