@@ -27,7 +27,7 @@ sh 'docker ps'
 }
    stage('change'){
        sh 'cat /usr/share/nginx/html/index.html'
-   sh 'sed -i  "s/nginx/hello abdessalem/g" /usr/share/nginx/html/index.html'
+   sh 'sudo sed -i  "s/nginx/hello abdessalem/g" /usr/share/nginx/html/index.html'
    sh 'cat /usr/share/nginx/html/index.html'
 }
 }
